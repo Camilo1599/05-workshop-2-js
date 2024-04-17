@@ -1,7 +1,7 @@
 const souvenirs = [];
 let flag = false;
 
-const validate = (type, value) => typeof value ===type && !Number.isNaN(value);
+const validate = (type, value) => typeof value === type && !Number.isNaN(value);
 
 
 if (confirm("Desea ingresar un souvenir")){
