@@ -1,7 +1,7 @@
 let dailyBudget = Number(prompt("Ingresa tu presupuesto diario"));
 let eatOut = Number(prompt("Ingresa cuanto te costara comer fuera: "));
 let buyBooks = Number(prompt("Ingresa cuanto te cuesta comprar libros: "));
-let dailySaving = Number(prompt("Ingresa cuanto seia lo minimo que quisieras ahorrar"));
+let dailySaving = Number(prompt("Ingresa cuanto seria lo minimo que quisieras ahorrar"));
 let totalExpenses = eatOut + buyBooks + dailySaving;
 console.log(totalExpenses)
 if (dailyBudget >= totalExpenses) {
@@ -14,10 +14,10 @@ else if (dailyBudget < totalExpenses) {
     alert("si deseas comprar libros podras ahorrar: " + (dailyBudget - buyBooks))
     let option = confirm("deseas comer fuera?");
     if (option == true){
-        alert("Elegiste comer fuera y ahorrar: " + (dailyBudget - eatOut))
+        alert("Elegiste comer fuera y ahorrar: " + (dailyBudget - eatOut)+ " ahorraste " + ((dailyBudget - eatOut) - dailySaving ) + " mas que tu minimo ahorro")
     }
     else {
-        alert("elegiste comprar libros y ahorrar: " + (dailyBudget - buyBooks))
+        alert("elegiste comprar libros y ahorrar: " + (dailyBudget - buyBooks) + ((dailyBudget - buyBooks) - dailySaving ) + " mas que tu minimo ahorro")
     }
   }
 }
