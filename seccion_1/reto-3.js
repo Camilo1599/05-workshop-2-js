@@ -11,7 +11,7 @@ let dailyBudget = prompt(
 let days = prompt("Ingresa la cantidad de dias que durara este viaje");
 // nameArticle = prompt("Ingresa el nombre del articulo extra que deseas comprar");
 extraArticle = Number(prompt("Ingresa el costo del articulo extra que deseas comprar"));
-finalBudget = initialBudget - dailyBudget * days;
+finalBudget = (initialBudget - dailyBudget * days) - threshold;
 console.log(extraArticle);
 betterOption = extraArticle;
 console.log(betterOption);
@@ -35,7 +35,7 @@ if (extraArticle < betterOption) {
 console.log(betterOption);
 alert("El articulo extra mas economico es el que cuesta $" + betterOption);
 
-if (finalBudget - extraArticle >= threshold) {
+if (finalBudget >= betterOption) {
   alert("Tu presupuesto es suficiente para comprar el articulo extra");
 } else {
   alert("evita gastos adicionales para no sobrepasar el presupuesto");
